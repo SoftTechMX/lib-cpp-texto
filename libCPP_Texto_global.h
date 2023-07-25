@@ -1,0 +1,12 @@
+#ifndef LIBCPP_TEXTO_GLOBAL_H
+#define LIBCPP_TEXTO_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(LIBCPP_TEXTO_LIBRARY)
+#  define LIBCPP_TEXTO_EXPORT Q_DECL_EXPORT
+#else
+#  define LIBCPP_TEXTO_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // LIBCPP_TEXTO_GLOBAL_H
