@@ -13,6 +13,11 @@
     #include <cstring>
 #endif
 
+#ifndef CCTYPE_H
+    #define CCTYPE_H
+    #include <cctype>
+#endif
+
 #ifndef LIST_H
     #define LIST_H
     #include <list>
@@ -65,6 +70,7 @@ public:
     list<string> split(char character);
     static bool isBigEndian();
     static bool isEmail( const string email );
+    static bool isPangram(const std::string& s);
 
     bool isCellPhone( const string cell );
     bool isCURP( const string CURP );

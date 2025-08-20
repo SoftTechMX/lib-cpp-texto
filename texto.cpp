@@ -140,6 +140,33 @@ bool Texto::isEmail( const string email )
     return false;
 }
 
+/**
+ * @brief Texto::isPangram
+ * Valida si una cadena es un pangram.
+ *
+ * @param s
+ * Es la cadena string que se desea validar.
+ *
+ * @return bool
+ * verdadero o falso.
+ */
+bool Texto::isPangram(const std::string& s) {
+    vector<bool> seen(26, false);
+    int count = 0;
+
+    for (char c : s) {
+        if (isalpha(c)) {
+            c = tolower(c);
+            int idx = c - 'a';
+            if (!seen[idx]) {
+                seen[idx] = true;
+                count++;
+            }
+        }
+    }
+
+    return count == 26;
+}
 
 
 
