@@ -1,4 +1,4 @@
-#include "Texto.h"
+#include "texto.h"
 
 size_t Texto::countWord(string word)
 {
